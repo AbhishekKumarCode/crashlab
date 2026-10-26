@@ -74,7 +74,7 @@ const TECHNIQUE_PATTERN = /^[a-z0-9_]{1,64}$/; // matches the labels in red-team
 
 // The broker is an API, not a website. A person who opens its address in a
 // browser is sent to the dashboard; tools get a small JSON description.
-const DASHBOARD_URL = (process.env.DASHBOARD_URL || "https://crashlab-byteforce.vercel.app").replace(/\/+$/, "");
+const DASHBOARD_URL = (process.env.DASHBOARD_URL || "https://crashlab-sandbox.vercel.app").replace(/\/+$/, "");
 app.get("/", (req, res) => {
   if (req.accepts(["json", "html"]) === "html") return res.redirect(302, DASHBOARD_URL + "/");
   res.json({ service: "crashlab-broker", note: "This is the API behind CrashLab, not a website.", dashboard: DASHBOARD_URL, health: "/health" });

@@ -5,7 +5,7 @@
 set -u
 cd "$(dirname "$0")/.."
 URL="${1:-http://127.0.0.1:4000}"
-ORIGIN="${DASHBOARD_ORIGIN:-https://crashlab-byteforce.vercel.app}"
+ORIGIN="${DASHBOARD_ORIGIN:-https://crashlab-sandbox.vercel.app}"
 val() { grep "^$1=" .env | cut -d= -f2-; }
 AUDIT=$(val AUDIT_TOKEN); VIEWER=$(val VIEWER_TOKEN); BLUE=$(val BLUE_TEAM_TOKEN)
 fail=0
