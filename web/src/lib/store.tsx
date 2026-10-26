@@ -176,7 +176,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   // Integrity checks that need no key: structure of the chain, and whether the
   // latest entry this browser saw last time is still there, unchanged.
   const links = useMemo(() => checkLinks(entries), [entries]);
-  const anchorStatus = useMemo(() => checkAnchor(entries, anchor), [entries, anchor]);
+  // Not before the first successful load: until then `entries` is just empty, which would look like a wiped record.
+  const anchorStatus = useMemo(() => checkAnchor(entries, lastPollAt === 0 ? null : anchor), [entries, anchor, lastPollAt]);
   useEffect(() => {
     if (source !== "broker" || lastPollAt === 0 || entries.length === 0) return;
     if (anchorStatus.state === "changed" || !links.ok) return; // never overwrite the reference with a suspicious record
