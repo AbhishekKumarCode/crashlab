@@ -7,7 +7,7 @@ attack. Every event is sealed into a tamper-evident, HMAC-chained audit log that
 
 Built by team **Byteforce** for **Hack in Hills '26**, Track 04: *Securing Adversarial AI Safety Testing Infrastructure*.
 
-**Live dashboard: https://bayora-sandbox.vercel.app** (no login needed)
+**Live dashboard: https://crashlab-byteforce.vercel.app** (no login needed)
 
 **Docs:** [Product Requirements](docs/PRD.md) · [Architecture](docs/ARCHITECTURE.md) · [API Reference](docs/API.md) · [Threat Model](docs/THREAT_MODEL.md) · [Design System](docs/DESIGN_SYSTEM.md)
 
@@ -52,7 +52,7 @@ flowchart LR
 
 ## Try it (for judges)
 
-Open **https://bayora-sandbox.vercel.app**. No login, no token, nothing to install.
+Open **https://crashlab-byteforce.vercel.app**. No login, no token, nothing to install.
 
 | Step | Where | What you will see |
 |---|---|---|

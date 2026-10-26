@@ -184,7 +184,7 @@ export function Landing() {
           <p className="mt-5 text-[17px] font-semibold opacity-90">Attack it, judge it blind, and keep a record nobody can quietly edit.</p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <Button size="lg" variant="primary" to="/app">Open the sandbox <ArrowRight size={18} strokeWidth={2.5} /></Button>
-            <a href="https://github.com/AbhishekKumarCode/bayora-sandbox" target="_blank" rel="noreferrer" className="b-btn h-14 px-6 text-[16px]"><Code2 size={18} strokeWidth={2.5} /> Source</a>
+            <a href="https://github.com/AbhishekKumarCode/crashlab" target="_blank" rel="noreferrer" className="b-btn h-14 px-6 text-[16px]"><Code2 size={18} strokeWidth={2.5} /> Source</a>
           </div>
         </div>
       </section>

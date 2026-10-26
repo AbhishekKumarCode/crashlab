@@ -17,7 +17,7 @@ services:
       - AUDIT_TOKEN=${AUDIT_TOKEN:?set AUDIT_TOKEN in .env}
       - VIEWER_TOKEN=${VIEWER_TOKEN:-} # optional public role: read the record, and start a rate-limited run of the current model
       - VIEWER_CAN_RUN=${VIEWER_CAN_RUN:-1}
-      - DASHBOARD_URL=${DASHBOARD_URL:-https://bayora-sandbox.vercel.app}
+      - DASHBOARD_URL=${DASHBOARD_URL:-https://crashlab-byteforce.vercel.app}
       - VIEWER_RUN_COOLDOWN_SEC=${VIEWER_RUN_COOLDOWN_SEC:-90}
       - VIEWER_RUNS_PER_IP_DAY=${VIEWER_RUNS_PER_IP_DAY:-6}
       - VIEWER_RUNS_PER_DAY=${VIEWER_RUNS_PER_DAY:-40}
