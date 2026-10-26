@@ -1,6 +1,6 @@
-# Threat Model — Bayora Sandbox
+# Threat Model — CrashLab
 
-This document is a deliberate part of the product, not an afterthought. The core pitch of Bayora Sandbox is that a platform which discloses its limits is more trustworthy than one that claims perfect security. This is that disclosure.
+This document is a deliberate part of the product, not an afterthought. The core pitch of CrashLab is that a platform which discloses its limits is more trustworthy than one that claims perfect security. This is that disclosure.
 
 ## What we defend against
 

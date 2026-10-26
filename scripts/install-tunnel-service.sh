@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Installs scripts/tunnel-watch.sh as a systemd service that starts on boot and restarts on failure.
-# Undo with: systemctl disable --now bayora-tunnel && rm /etc/systemd/system/bayora-tunnel.service
+# Undo with: systemctl disable --now crashlab-tunnel && rm /etc/systemd/system/crashlab-tunnel.service
 set -euo pipefail
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 chmod +x "$ROOT/scripts/tunnel-watch.sh"
-cat > /etc/systemd/system/bayora-tunnel.service <<EOF
+cat > /etc/systemd/system/crashlab-tunnel.service <<EOF
 [Unit]
-Description=Bayora broker tunnel + dashboard pointer
+Description=CrashLab broker tunnel + dashboard pointer
 After=network-online.target docker.service
 Wants=network-online.target
 
@@ -23,5 +23,5 @@ RestartSec=5
 WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
-systemctl enable --now bayora-tunnel
-echo "installed; follow it with: journalctl -u bayora-tunnel -f"
+systemctl enable --now crashlab-tunnel
+echo "installed; follow it with: journalctl -u crashlab-tunnel -f"

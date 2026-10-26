@@ -1,4 +1,4 @@
-# Design System — Bayora Sandbox
+# Design System — CrashLab
 
 Visual reference for the dashboard UI. Colors use OKLCH (perceptually uniform — better for generating consistent tints/shades than hex/HSL). Values below match the reference build the team approved.
 

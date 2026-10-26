@@ -1,6 +1,6 @@
 > **Superseded.** This is an early design note. The built-in demo data it mentions was removed; the dashboard reads only the live broker.
 
-# Bayora Sandbox UI rebuild — design
+# CrashLab UI rebuild — design
 
 Date: 2026-10-20. Approved in chat ("ok lets build").
 

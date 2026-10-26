@@ -72,7 +72,7 @@ export function Shell() {
         <aside className="sticky top-0 hidden h-screen w-[248px] shrink-0 flex-col border-r border-line bg-white/40 px-4 py-5 backdrop-blur-xl lg:flex">
           <Link to="/" className="mb-7 flex items-center gap-2.5 px-1">
             <Logo />
-            <span className="display text-[17px]">Bayora Sandbox</span>
+            <span className="display text-[17px]">CrashLab</span>
           </Link>
           {nav}
           <div className="mt-auto space-y-3">
@@ -87,7 +87,7 @@ export function Shell() {
         <div className="flex min-w-0 flex-1 flex-col">
           <header className="sticky top-0 z-30 border-b border-line bg-white/55 backdrop-blur-xl">
             <div className="mx-auto flex h-14 max-w-[1240px] items-center gap-3 px-4 sm:px-6 lg:px-8">
-              <Link to="/" className="flex items-center gap-2 lg:hidden"><Logo /><span className="display text-[16px]">Bayora</span></Link>
+              <Link to="/" className="flex items-center gap-2 lg:hidden"><Logo /><span className="display text-[16px]">CrashLab</span></Link>
               <div className="hidden items-center gap-2 lg:flex">
                 <span className="label">Sandbox</span><span className="label opacity-50">/</span><span className="display text-[15px]">{pageTitle}</span>
                 {s.modelName && <span className="ml-3 hidden rounded-full border border-line bg-white/60 px-2.5 py-0.5 text-[12px] text-ink-2 xl:inline">testing <span className="mono font-semibold text-ink">{s.modelName}</span>{s.judgeModel && <> · judge <span className="mono font-semibold text-ink">{s.judgeModel}</span></>}</span>}
@@ -133,7 +133,7 @@ export function Shell() {
           <div className="absolute inset-0 bg-ink/40" onClick={() => setOpen(false)} />
           <div className="absolute inset-y-0 left-0 flex w-[290px] flex-col border-r border-line bg-paper px-4 py-5">
             <div className="mb-6 flex items-center justify-between px-1">
-              <span className="flex items-center gap-2"><Logo /><span className="display text-[16px]">Bayora Sandbox</span></span>
+              <span className="flex items-center gap-2"><Logo /><span className="display text-[16px]">CrashLab</span></span>
               <button onClick={() => setOpen(false)} aria-label="Close menu" className="border border-line bg-card p-1.5"><X size={18} strokeWidth={2.5} /></button>
             </div>
             {nav}

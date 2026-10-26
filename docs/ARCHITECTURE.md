@@ -1,4 +1,4 @@
-# Architecture — Bayora Sandbox
+# Architecture — CrashLab
 
 ## System overview
 

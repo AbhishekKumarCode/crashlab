@@ -22,7 +22,7 @@ export function RunDetail() {
   async function doVerify() { setBusy(true); try { setVerify(await s.verify()); } finally { setBusy(false); } }
   function exportJson() {
     const blob = new Blob([JSON.stringify({ run: { id: run!.id, startedAt: run!.startedAt, endedAt: run!.endedAt }, entries }, null, 2)], { type: "application/json" });
-    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `bayora-${run!.id}-evidence.json`; a.click(); URL.revokeObjectURL(a.href);
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `crashlab-${run!.id}-evidence.json`; a.click(); URL.revokeObjectURL(a.href);
   }
   return (
     <div className="mx-auto max-w-[960px] space-y-8">

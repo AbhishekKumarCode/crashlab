@@ -9,7 +9,7 @@
 set -u
 umask 077
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
-STATE_DIR=${STATE_DIR:-/var/lib/bayora}
+STATE_DIR=${STATE_DIR:-/var/lib/crashlab}
 STATE="$STATE_DIR/broker-url"      # the address the live dashboard was last built with
 PORT=${BROKER_PORT:-4000}
 # Private, root-only directory: logs here cannot be pre-created or symlinked by other users,

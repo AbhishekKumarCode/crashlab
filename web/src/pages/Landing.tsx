@@ -24,7 +24,7 @@ export function Landing() {
       {/* Nav */}
       <header className="sticky top-0 z-40 border-b border-line bg-paper">
         <div className="mx-auto flex h-16 max-w-[1240px] items-center justify-between px-4 sm:px-6">
-          <Link to="/" className="flex items-center gap-2.5"><Logo /><span className="display text-[18px]">Bayora Sandbox</span></Link>
+          <Link to="/" className="flex items-center gap-2.5"><Logo /><span className="display text-[18px]">CrashLab</span></Link>
           <nav className="hidden items-center gap-1 md:flex">
             {[["#how", "How it works"], ["#isolation", "Isolation"], ["#leak", "The leak"], ["#proof", "Sealed proof"], ["#faq", "FAQ"]].map(([h, l]) => <a key={h} href={h} className="b-nav py-2 text-[13.5px]">{l}</a>)}
           </nav>
@@ -40,7 +40,7 @@ export function Landing() {
       </header>
       {menu && (
         <div className="fixed inset-0 z-50 bg-paper p-6 md:hidden rise">
-          <div className="flex items-center justify-between"><span className="flex items-center gap-2"><Logo /><span className="display text-[18px]">Bayora Sandbox</span></span><button onClick={() => setMenu(false)} aria-label="Close menu" className="border border-line bg-card p-1.5"><X size={20} strokeWidth={2.5} /></button></div>
+          <div className="flex items-center justify-between"><span className="flex items-center gap-2"><Logo /><span className="display text-[18px]">CrashLab</span></span><button onClick={() => setMenu(false)} aria-label="Close menu" className="border border-line bg-card p-1.5"><X size={20} strokeWidth={2.5} /></button></div>
           <nav className="display mt-10 flex flex-col gap-5 text-[26px]">
             {[["#how", "How it works"], ["#isolation", "Isolation"], ["#leak", "The leak"], ["#proof", "Sealed proof"], ["#faq", "FAQ"]].map(([h, l]) => <a key={h} href={h} onClick={() => setMenu(false)}>{l}</a>)}
             <Link to="/app" className="mt-4 underline decoration-[3px] underline-offset-8">Open the sandbox →</Link>
@@ -105,7 +105,7 @@ export function Landing() {
           <div className="label text-muted">Isolation, enforced in code</div>
           <h2 className="display mt-3 text-[36px] sm:text-[52px]">Not promised. <span className="text-blue-2">Built in.</span></h2>
           <div className="mt-12 grid gap-8 md:grid-cols-6">
-            <Tile tone="red" className="p-6 md:col-span-4"><div className="flex items-center gap-2"><Network size={18} strokeWidth={2.5} /><span className="display text-[18px]">Two networks, no bridge, no egress</span></div><p className="mt-2 text-[14.5px] font-semibold text-ink-2">The red room lives on <code className="mono">red-net</code>, which is internal: no internet, no path to the blue room. Only the broker sits on both networks. Probe it live: <code className="mono">docker exec bayora-red-team wget blue-team</code> → bad address.</p></Tile>
+            <Tile tone="red" className="p-6 md:col-span-4"><div className="flex items-center gap-2"><Network size={18} strokeWidth={2.5} /><span className="display text-[18px]">Two networks, no bridge, no egress</span></div><p className="mt-2 text-[14.5px] font-semibold text-ink-2">The red room lives on <code className="mono">red-net</code>, which is internal: no internet, no path to the blue room. Only the broker sits on both networks. Probe it live: <code className="mono">docker exec crashlab-red-team wget blue-team</code> → bad address.</p></Tile>
             <Tile tone="blue" className="p-6 md:col-span-2"><div className="flex items-center gap-2"><EyeOff size={18} strokeWidth={2.5} /><span className="display text-[18px]">Blind by API shape</span></div><p className="mt-2 text-[14.5px] font-semibold text-ink-2">The judge's only read is <code className="mono">GET /pending</code>: reply text and an id. The prompt is not in the payload.</p></Tile>
             <Tile tone="violet" className="p-6 md:col-span-2"><div className="display text-[18px]">One token, one role</div><p className="mt-2 text-[14.5px] font-semibold text-ink-2">A valid blue token still gets 403 on <code className="mono">/audit</code>. The judge cannot read the attacks out of the log.</p></Tile>
             <Tile tone="green" className="p-6 md:col-span-2"><div className="flex items-center gap-2"><Lock size={18} strokeWidth={2.5} /><span className="display text-[18px]">Keyed, not just hashed</span></div><p className="mt-2 text-[14.5px] font-semibold text-ink-2">A plain hash chain can be re-forged by anyone who can read it. An HMAC chain can't, without the key the rooms never hold.</p></Tile>
@@ -190,7 +190,7 @@ export function Landing() {
       </section>
       <footer className="border-t border-line bg-paper py-8">
         <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-4 px-4 text-[12.5px] font-bold sm:px-6">
-          <span className="flex items-center gap-2"><Logo size={22} /> Bayora Sandbox · Team Byteforce · Galgotias University</span>
+          <span className="flex items-center gap-2"><Logo size={22} /> CrashLab · Team Byteforce · Galgotias University</span>
           <span className="label text-muted">Hack in Hills '26 · Track 04</span>
         </div>
       </footer>

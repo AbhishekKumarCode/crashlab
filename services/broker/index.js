@@ -77,7 +77,7 @@ const TECHNIQUE_PATTERN = /^[a-z0-9_]{1,64}$/; // matches the labels in red-team
 const DASHBOARD_URL = (process.env.DASHBOARD_URL || "https://bayora-sandbox.vercel.app").replace(/\/+$/, "");
 app.get("/", (req, res) => {
   if (req.accepts(["json", "html"]) === "html") return res.redirect(302, DASHBOARD_URL + "/");
-  res.json({ service: "bayora-broker", note: "This is the API behind Bayora Sandbox, not a website.", dashboard: DASHBOARD_URL, health: "/health" });
+  res.json({ service: "crashlab-broker", note: "This is the API behind CrashLab, not a website.", dashboard: DASHBOARD_URL, health: "/health" });
 });
 
 // ---- One-time operator token reveal (like creating an API key) ----
@@ -87,7 +87,7 @@ app.get("/", (req, res) => {
 // forwarding headers), so a stranger on the public address cannot claim it.
 // To show it again: delete logs/.token-revealed and reload.
 const REVEAL_FLAG = join(dirname(process.env.AUDIT_LOG_PATH || "/logs/audit.log"), ".token-revealed");
-const page = (body) => `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bayora operator token</title><body style="font:16px system-ui;max-width:560px;margin:12vh auto;padding:0 20px;color:#1f2430">${body}</body>`;
+const page = (body) => `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CrashLab operator token</title><body style="font:16px system-ui;max-width:560px;margin:12vh auto;padding:0 20px;color:#1f2430">${body}</body>`;
 app.get("/setup", async (req, res) => {
   res.set({ "Cache-Control": "no-store", "X-Robots-Tag": "noindex" });
   const host = (req.headers.host || "").toLowerCase().replace(/:\d+$/, "");

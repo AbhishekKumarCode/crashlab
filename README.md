@@ -1,4 +1,4 @@
-# Bayora Sandbox
+# CrashLab
 
 **A safe place to attack an AI model, with a judge that can't be tipped off and a record nobody can quietly rewrite.**
 
@@ -31,7 +31,7 @@ Built by team **Byteforce** for **Hack in Hills '26**, Track 04: *Securing Adver
 
 Testing an AI model's safety needs two teams that must not collude: one that attacks, one that judges.
 If the judge can see the attack, or the log can be edited afterwards, the result means nothing.
-Bayora makes both of those hard to do, and shows the proof.
+CrashLab makes both of those hard to do, and shows the proof.
 
 ```mermaid
 flowchart LR
@@ -119,8 +119,8 @@ These are properties of the code and the container setup, not promises.
 You can probe the isolation on the running system:
 
 ```bash
-docker exec bayora-red-team wget -T 3 -O /dev/null https://api.groq.com/   # no route: red-net has no internet
-docker exec bayora-red-team wget -T 3 -O /dev/null http://blue-team:4000   # bad address: no shared network
+docker exec crashlab-red-team wget -T 3 -O /dev/null https://api.groq.com/   # no route: red-net has no internet
+docker exec crashlab-red-team wget -T 3 -O /dev/null http://blue-team:4000   # bad address: no shared network
 ```
 
 ---
@@ -189,7 +189,7 @@ changes its hostname every time `cloudflared` restarts, so a small service keeps
 
 ```bash
 sudo scripts/install-tunnel-service.sh     # once; starts on boot, restarts on failure
-journalctl -u bayora-tunnel -f             # watch it
+journalctl -u crashlab-tunnel -f             # watch it
 ```
 
 `scripts/tunnel-watch.sh` runs the tunnel. When the hostname changes it sets `VITE_BROKER_URL` in the Vercel

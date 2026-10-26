@@ -1,7 +1,7 @@
 services:
   broker:
     build: ./services/broker
-    container_name: bayora-broker
+    container_name: crashlab-broker
     environment:
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
       - ANTHROPIC_MODEL=${ANTHROPIC_MODEL:-claude-sonnet-5-5}
@@ -39,7 +39,7 @@ services:
 
   red-team:
     build: ./services/red-team
-    container_name: bayora-red-team
+    container_name: crashlab-red-team
     restart: unless-stopped
     environment:
       - BROKER_URL=http://broker:4000
@@ -56,7 +56,7 @@ services:
 
   blue-team:
     build: ./services/blue-team
-    container_name: bayora-blue-team
+    container_name: crashlab-blue-team
     restart: unless-stopped
     environment:
       - BROKER_URL=http://broker:4000
